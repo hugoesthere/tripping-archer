@@ -1,0 +1,409 @@
+html, body {
+    width: 100%;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal;
+}
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+.clear-left {clear:left;}
+.clear-right {clear: right;}
+
+a {color: rgb(80,80,80);text-decoration: none;}
+a:hover {color: black;}
+.centered {text-align: center;}
+p {color: white; font-weight: 500; font-size: 18px;}
+.orange {color: orange;}
+.gold {color: #FFD700;}
+.blue {color: blue;}
+
+#jump-top-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+#jump-top-container {
+  background: white;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#jump-top-container a {
+  padding: 0 30px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.6em;
+}
+
+
+/****************************
+Header
+*****************************/
+
+header {
+    width: 100%;
+    height: 100px;
+    background: white;
+    color: black;
+}
+
+    header .left {
+        height: 100%;
+        padding-left: 20px;
+    }
+    header .left h1 {
+        height: 100%;
+        line-height: 100px;
+        font-size: 1.5em;
+        font-weight: 700;
+        margin: 0;
+    }
+    header .left h1 a {
+      color: orange;
+      padding-left: 20px;
+    }
+
+      header .left h1 a:hover {
+        color: black;
+      }
+
+      header .left h6 a {
+        font-size: 1em;
+        color: orange;
+        padding-left: 20px;
+      }
+
+      header .left h6 a:hover {
+        color: black;
+      }
+
+      header .left * {
+        display: inline;
+      }
+
+    header .right {
+        height: 100%;
+    }
+
+        header .right ul {
+            padding: 0 20px;
+        }
+
+            header .right ul li{
+                display: inline;
+                padding: 0 10px;
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+
+              header .right ul li a {
+                line-height: 110px;
+              }
+
+
+/****************************
+Main Content
+*****************************/
+
+section.content {
+    /*width: 100%;*/
+}
+
+.screen {
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.screen-1 {
+    background: rgb(38,174,144);
+}
+
+.screen-2 {
+    background: rgb(46, 172, 243);
+}
+
+.screen-3 {
+    background: rgb(213, 51, 37);
+}
+
+.screen-4 {
+    background: rgb(255, 255, 255);
+}
+
+.screen-5 {
+    background: rgb(147, 22, 224);
+}
+
+.screen-6 {
+    background: rgb(230, 0, 120);
+}
+
+.screen-7 {
+  background: rgb(39, 46, 58);
+}
+
+.screen-8 {
+  background: rgb(255, 136, 0);
+}
+
+.screen-title {
+  padding: 20px;
+  font-size: 3em;
+  margin: 0;
+}
+
+.screen h1, .screen h2, .screen h3, .screen h4, .screen h5, .screen h6 {
+  font-weight: 800;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+
+.top-left {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#home h1 {
+  overflow-y: visible;
+  overflow-x: visible;
+}
+
+#home h2#date {
+  font-size: 2em;
+  font-weight: 600;
+  color: white;
+  margin-top: 50px;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+#schedule ul li {
+  margin: 40px 0;
+}
+
+#schedule ul li * {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: white;
+}
+
+  #schedule ul li h4 {
+    font-size: 1.8em;
+  }
+
+  #schedule ul li h5 {
+    font-size: 2.5em;
+  }
+
+#sponsors p, #sponsors h1, #sponsors h3, #sponsors h4,
+#sponsors h5 {
+    color: black;
+}
+
+#sponsors .heading {
+  padding: 20px 0px;
+  margin-bottom: 25px;
+}
+
+#sponsors p .blue {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#sponsors h2 {
+  text-align: center;
+}
+
+#sponsors h4 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#sponsors li {
+  padding-bottom: 40px;
+}
+
+#devtools li, #judges li {
+  padding-top: 30px;
+}
+
+#judges .thumb {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin-right: 20px;
+  float: left;
+}
+
+#judges .thumb img {
+  border: solid .75px black;
+}
+
+#judges .small {
+  font-size: .75em;
+}
+
+#prizes .category .prize {
+  margin-top: 50px;
+}
+
+#prizes .category .prize ul {
+  padding-left: 40px;
+}
+#prizes .category .prize ul li {
+  font-size: 1.3em;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: white;
+  list-style: circle;
+}
+
+
+/****************************
+Footer
+*****************************/
+
+footer {
+    width: 100%;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-size: 12px;
+}
+
+footer p a {
+  color: orange;
+}
+
+/****************************
+Sponsor page
+*****************************/
+
+div.container.sponsor-page .tier {
+  margin: 40px auto;
+}
+div.container.sponsor-page .tier.gold h2 {
+
+}
+
+div.container.sponsor-page .tier h2 {
+  margin: 0;
+}
+
+div.container.sponsor-page .tier ul {
+  list-style: disc;
+  color: white;
+}
+
+div.container.sponsor-page .tier ul li {
+  font-size: 1.4em;
+}
+
+/****************************
+Developer Tools
+*****************************/
+
+div.container.tools-page {
+    background: rgb(255, 255, 255);
+}
+
+div.container.tools-page h1, div.container.tools-page h2,
+div.container.tools-page p {
+    color: black;
+}
+
+/****************************
+Mobile
+*****************************/
+
+
+@media all and (min-width: 320px) and (max-width: 780px) {
+  header {
+    height: auto;
+    padding: 20px;
+  }
+
+  header .left {
+    float: none;
+    text-align: center;
+    font-size: 1.5em;
+    height: auto;
+    padding: 0;
+  }
+
+  header .left * {
+    display: block;
+  }
+
+  header .left h1 {
+    height: auto;
+    line-height: 40px;
+    font-size: 1.5em;
+  }
+
+  header .left h6 a {
+    padding: 0;
+    font-size: .7em;
+  }
+
+  header .right {
+    float: none;
+    height: auto;
+    padding: 0;
+    margin: auto;
+    width: 340px;
+  }
+
+  header .right ul {
+    padding: 0;
+  }
+
+  header .right ul li {
+    padding: 5px;
+  }
+
+  header .right ul li a {
+    line-height: 20px;
+  }
+}
+
+/****************************
+Fonts
+*****************************/
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
