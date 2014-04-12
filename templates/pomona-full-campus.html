@@ -1,11 +1,42 @@
-<!doctype html>
+
 <html>
 <head>
   <script src="/assets/jquery.js"></script>
   <title>Pomona College Room Draw</title>
   <style>
+  .harwood{
+    opacity: 0.8;
+  }
   .harwood1{
   	z-index: 1;
+    position: absolute;
+    top: 1400px;
+    left: 300px;
+
+  }
+  .h1{
+    border-radius: 20px;
+  }
+  .harwood2{
+    z-index: 1;
+    position: absolute;
+    top: 1400px;
+    left: 180px;
+  }
+  .h2{
+    border-radius: 20px;
+  }
+  .harwood3{
+    z-index: 1;
+    position: absolute;
+    top: 1310px;
+    left: 240px;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);\
+  }
+  .h3{
+    border-radius: 20px;
   }
 
   .pomona{
@@ -16,16 +47,34 @@
 <body>
 
 <div class="pomona">
-	<img src="http://i.imgur.com/5VgNW7w.jpg" width="1250px">
+	<img src="http://i.imgur.com/5VgNW7w.jpg" width="1250px" usemap="#pomona">
+
+  <map name="pomona">
+    <area shape="rect" coords="150,1350,350,1500" href="http://timenewsfeed.files.wordpress.com/2013/12/doge.jpg">
+  </map>
+
 </div>
-<div class="harwood1">
-	<img src="http://timenewsfeed.files.wordpress.com/2013/12/doge.jpg">
-</div>	
+
+<div class="harwood">
+  <div class="harwood1">
+  	<img class="h1" src="http://timenewsfeed.files.wordpress.com/2013/12/doge.jpg" width="50px" height="130px">
+  </div>	
+
+  <div class="harwood2">
+    <img class="h2" src="http://timenewsfeed.files.wordpress.com/2013/12/doge.jpg" width="50px" height="130px">
+  </div>  
+
+  <div class="harwood3">
+    <img class="h3" src="http://timenewsfeed.files.wordpress.com/2013/12/doge.jpg" width="50px" height="170px">
+  </div>
+</div>
+
+
 
 
 <script type="text/javascript">
-	$('div').on('click', function() {
-      $(this).toggleClass('harwood');
+	$('div').mouseover(function() {
+      $('div').toggleClass('harwood');
   });
 </script>
 
