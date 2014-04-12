@@ -33,11 +33,11 @@ class Room:
 		return "campus: %s, region: %s, bldg: %s, ac: %s, stname: %s, capacity: %s, roomnum: %s, sqft: %s, roomtype: %s, subfree: %s" % (self.campus, self.region, self.bldg, self.ac, self.stname, self.capacity, self.roomnum, self.sqft, self.roomtype, self.subfree)
 
 
-def getCapacity(input, roomarray = Room.rooms):
+def getCapacity(inpcap, roomarray = Room.rooms):
     """returns all rooms in suites of a given capacity"""
     output = []
     for room in roomarray:
-    	if room.capacity == input:
+    	if room.capacity == inpcap:
     		output.append(room)
     return output
 
@@ -64,6 +64,27 @@ def getSuite(inpsuite, roomarray = Room.rooms):
 			output.append(room)
 	return output
 
+def getSuitenames(roomarray = Room.rooms):
+	names = []
+	check = True
+	for room in roomarray:
+		for name in names:
+			if room.stname == name:
+				check = False
+			else:
+				pass
+		if check:
+			names.append(room.stname)
+		check = True
+	return names
+
+def getSubfree(inpsub, roomarray = Room.rooms):
+	output = []
+	for room in roomarray:
+		if room.subfree == inpsub:
+			output.append(room)
+	return output
+
 
 def main():
 
@@ -73,42 +94,55 @@ def main():
 	rownum = 0
 	for row in reader:
 	    # Save header row.
-	    if rownum == 0:
-	        header = row
-	    else:
-	    	Room(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9])
+		if row[3] == "Yes":
+			ac = True
+		else:
+			ac = False
+		if row[9] == "Yes":
+			subfree = True
+		else:
+			subfree = False
+		if rownum == 0:
+			header = row
+		else:
+			Room(row[0], row[1], row[2], ac, row[4], int(row[5]), int(row[6]), int(row[7]), row[8], subfree)
 	    	#print row[0]
 	        #colnum = 0
 	        #for col in row:
 	        #    print '%-8s: %s' % (header[colnum], col)
 	        #    colnum += 1
 	            
-	    rownum += 1
+		rownum += 1
 
 	ifile.close()
 
-def main2():
+# def main2():
 
-	with open("harwood_rooms.csv", "rU") as roomdata:
-		reader = csv.reader(roomdata)
-		for line in reader:
-			print line
-		for line in reader:
-			campus = line[0] 
-			region = line[1] 
-			bldg = line[2]  
-			ac = line[3] 
-			stname = line[4] 
-			capacity = line[5]  
-			roomnum = line[6] 
-			sqft = line[7] 
-			roomtype = line[8]  
-			subfree = line[9] 
-			Room(campus, region, bldg, ac, stname, capacity, roomnum, sqft, roomtype, subfree)
-
-			
-
-	roomdata.close()
+# 	with open("harwood_rooms.csv", "rU") as roomdata:
+# 		reader = csv.reader(roomdata)
+# 		rownum = 0
+# 		for line in reader:
+# 			if rownum == 0:
+# 				header = line
+# 	   		else:
+# 				campus = line[0] 
+# 				region = line[1] 
+# 				bldg = line[2]  
+# 				if line[3] == "Yes":
+# 					ac = True
+# 				else:
+# 					ac = False
+# 				stname = line[4] 
+# 				capacity = int(line[5])  
+# 				roomnum = int(line[6]) 
+# 				sqft = int(line[7]) 
+# 				roomtype = line[8]  
+# 				if line[9] == "Yes":
+# 					subfree = True
+# 				else:
+# 					subfree = False
+# 				Room(campus, region, bldg, ac, stname, capacity, roomnum, sqft, roomtype, subfree)
+#	roomdata.close()
 
 
 # Sample code entered in terminal
@@ -117,3 +151,8 @@ def main2():
 # fours 
 # getSuite("0A", fours)
 
+# names = getSuitenames()
+# names
+# winners = getSubfree(False)
+# names2 = getSuitenames(winners)
+# names2
