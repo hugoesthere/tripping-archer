@@ -1,35 +1,33 @@
 <!doctype html>
 <html>
 <head>
+  <script src="/assets/jquery.js"></script>
   <title>Pomona College Room Draw</title>
   <style>
-	.harwood {
-	  height: 0px;
-	  width: 70px;
-	  border-top: 75px solid #bc6;
-	  border-left: 75px solid #bc6;
-	  border-right: 75px solid #bc6;
-	  border-bottom: 75px solid #bc6;
+  .harwood1{
+  	z-index: 1;
+  }
 
-	  border-radius: 20px 20px 20px 20px;
-	  position: relative;
-	  top: -500px;
-	  left: 400px;
-	  z-index: 1;
-	}
   .pomona{
   	z-index: -1;
-  	width: 100%;
   }
   </style>
 </head>
 <body>
 
 <div class="pomona">
-	<img src="http://i.imgur.com/5VgNW7w.jpg" width="100%">
+	<img src="http://i.imgur.com/5VgNW7w.jpg" width="1250px">
 </div>
-<div class="harwood"></div>
+<div class="harwood1">
+	<img src="http://timenewsfeed.files.wordpress.com/2013/12/doge.jpg">
+</div>	
 
+
+<script type="text/javascript">
+	$('div').on('click', function() {
+      $(this).toggleClass('harwood');
+  });
+</script>
 
 </body>
 
