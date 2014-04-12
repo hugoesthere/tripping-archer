@@ -12,7 +12,7 @@
 
 <div class="test">
 <fieldset><legend><strong>Region</strong></legend>
-<table cellspacing="5" cellpadding="5">
+<table cellspacing="0" cellpadding="5">
 <TR><TD>
 <LABEL><INPUT TYPE="checkbox" NAME="gender" >North</INPUT></LABEL></TD>
 <TD><LABEL><INPUT TYPE="checkbox" NAME="region" CHECKED
@@ -22,7 +22,7 @@ VALUE="North">South</INPUT></LABEL></TD></TR>
 </div>
 
 <fieldset><legend><strong>Suite Characteristics</strong></legend>
-<table cellspacing="5" cellpadding="5">
+<table cellspacing="0" cellpadding="5">
 <TR>
 <TD><LABEL><INPUT TYPE="checkbox" NAME="ac" >AC</INPUT></LABEL></TD>
 <TD><LABEL><INPUT TYPE="checkbox" NAME="subfree" >Sub-Free?</INPUT></LABEL></TD></TR>
@@ -40,10 +40,10 @@ VALUE="North">South</INPUT></LABEL></TD></TR>
 </fieldset>
 
 <fieldset><legend><strong>Building</strong></legend>
-<table cellspacing="5" cellpadding="5">
+<table cellspacing="0" cellpadding="5">
 <TR><TD><LABEL><INPUT TYPE="checkbox" NAME="gender" Checked Value="any" >Any</INPUT></LABEL></TD>
 </table>
-<table cellspacing="5" cellpadding="5">
+<table cellspacing="0" cellpadding="5">
 <TR>
 <TD><LABEL><INPUT TYPE="checkbox" NAME="gender" >Blaisdell</INPUT></LABEL></TD>
 <TD><LABEL><INPUT TYPE="checkbox" NAME="gender" >Mudd</INPUT></LABEL></TD>
