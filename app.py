@@ -22,6 +22,14 @@ def search():
 def map():
 	return render_template("pomona-full-campus.html")
 
+@app.route('/harwood.html')
+def harwood():
+	return render_template("harwood.html")
+
+@app.route('/hw2e4person.html')
+def h2e():
+	return render_template("hw2e4person.html")
+
 
 
 if __name__ == '__main__':
