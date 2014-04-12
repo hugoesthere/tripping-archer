@@ -18,6 +18,10 @@ def majors():
 def search():
     return render_template("searchbox.html")
 
+@app.route('/pomona-full-campus.html')
+def map():
+	return render_template("pomona-full-campus.html")
+
 
 
 if __name__ == '__main__':
