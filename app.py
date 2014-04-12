@@ -10,9 +10,10 @@ app = Flask(__name__)
 #db = connection[db_name]
 
 
-@app.route('/pomona')
+@app.route('/')
 def majors():
-    return render_template("pomona-full-campus.html")
+    return render_template("homepage.html")
+
 
 
 if __name__ == '__main__':
