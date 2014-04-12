@@ -14,6 +14,10 @@ app = Flask(__name__)
 def majors():
     return render_template("homepage.html")
 
+@app.route('/searchbox.html')
+def search():
+    return render_template("searchbox.html")
+
 
 
 if __name__ == '__main__':
