@@ -34,6 +34,10 @@ def h2e():
 def draw():
 	return render_template("drawEntry.html")
 
+@app.route('/drawEntry2.html')
+def draw2():
+	return render_template("drawEntry2.html")
+
 
 
 if __name__ == '__main__':
