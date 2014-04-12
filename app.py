@@ -30,6 +30,10 @@ def harwood():
 def h2e():
 	return render_template("hw2e4person.html")
 
+@app.route('/drawEntry.html')
+def draw():
+	return render_template("drawEntry.html")
+
 
 
 if __name__ == '__main__':
