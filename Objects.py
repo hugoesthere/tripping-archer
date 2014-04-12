@@ -19,29 +19,63 @@
 # Object hierarchy:
 # School -> Campus -> Building -> Suite -> Room
 
-class School :
+class Campus :
 	"""An object for an entire school:
 	   ex: Pomona, Mudd, Pitzer"""
-	pass
+	# School Name
+	def __init__(self, schoolname):
+		self.campus = schoolname
 
-class Campus :
+	def getCampus():
+		return campus
+
+	def __str__(self): 
+		return "%s" % (self.campus)
+
+class Region(Campus):
 	"""An object for a region of campus:
 	   ex: North and South campus for Pomona
 	       North, Mid, and South quad for CMC"""
-	pass
+	# Region
+	def __init__(self, region):
+		self.region = region
 
-class Building :
+
+	def __str__(self): pass
+
+class Building(Region):
 	"""An object for a dorm bulding:
 	   ex: Sontag, Lawry, Clark III"""
-	pass
+	# Name 
+	# AC
+	def __init__(self, bldg, ac = False):
+		self.bldg = bldg
+		self.ac = ac
+	def __str__(self): pass
 
-class Suite :
+class Suite(Building):
 	"""An object for a specific suite in a bulding
 	   ex: Clark III 113-116"""
-	pass
+	# Number of people
+	# Suite number/room numbers
+	def __init__(self, suitename, capacity):
+		self.suitename = suitename
+		self.capacity = capacity
+	def __str__(self): pass
 
-class Room :
+class Room(Suite):
 	"""An object a specific room:
 	   ex: Clark III 114"""
-	pass
+
+	# roomnum - Number
+	# sqft - Square footage
+	# subfree - Subfree/not subfree
+	# type - Room type
+	def __init__(self, roomnum, sqft, rmtype, subfree = False):
+		self.roomnum = roomnum
+		self.sqft = sqft
+		self.rmtype = rmtype
+		self.subfree = subfree
+	def __str__(self): pass
+
 
